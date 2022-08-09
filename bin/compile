@@ -66,4 +66,5 @@ if [ ! -x "$CARGO_HOME/bin/rustc" ]; then
 fi
 
 echo "-----> Running wasm-pack"
+cd "$BUILD_DIR"
 wasm-pack build --target web -d client/src/pkg -- --features=wasm
