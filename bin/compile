@@ -43,6 +43,7 @@ if [ -d "$CARGO_HOME" ]; then
     rustup self update
     rustup update "$VERSION"
     rustup default "$VERSION"
+    rustup target add wasm32-unknown-unknown
 else
     echo "-----> Downloading rustup"
     curl https://sh.rustup.rs -sSf > rustup.sh
